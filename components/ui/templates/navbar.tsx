@@ -48,12 +48,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className=" fixed top-0 left-0 w-full z-1000 backdrop-blur-md">
+    <nav className=" fixed top-0 left-0 w-full z-1000 backdrop-blur-2xl">
       <div className="max-w-6xl m-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* LOGO */}
         <Link
           href="/"
-          className="text-xl font-medium text-gray-900 dark:text-gray-100"
+          className="text-xl font-medium text-gray-400  dark:text-gray-100"
         >
           React Resorts
         </Link>
@@ -74,8 +74,8 @@ export default function Navbar() {
                       transition
                       ${
                         activeSection === item.href
-                          ? "bg-blue-100 dark:bg-accent font-semibold"
-                          : "bg-gray-100 dark:bg-accent text-black dark:text-white"
+                          ? "bg-gray-200 dark:bg-accent font-semibold"
+                          : "bg-gray-200 dark:bg-accent font-semibold"
                       }
                     `}
                   >
@@ -91,7 +91,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Link
             href="/get-started"
-            className="px-4 py-2 rounded-b-3xl text-white bg-accent"
+            className="px-4 py-2 rounded-b-3xl text-white bg-accent dark"
           >
             Get Started
           </Link>
@@ -110,9 +110,9 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden px-4 pb-4 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800"
+            className="md:hidden px-4 pb-4 border-t border-gray-200 dark:border-gray-800"
           >
-            <ul className="flex flex-col items-center space-y-3">
+            <ul className="flex flex-col items-center mt-6 space-y-4">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
@@ -122,8 +122,8 @@ export default function Navbar() {
                       block px-4 py-2 rounded-lg
                       ${
                         activeSection === item.href
-                          ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 font-semibold"
-                          : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                          ? "bg-blue-100 dark:bg-accent font-semibold"
+                          : "bg-gray-200 dark:bg-accent text-gray-800 dark:text-gray-200"
                       }
                     `}
                   >
@@ -136,7 +136,7 @@ export default function Navbar() {
                 <Link
                   href="/get-started"
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 rounded-lg bg-accent text-white"
+                  className="block px-4 py-2 rounded-lg bg-gray-300 dark:bg-accent text-black dark:text-white"
                 >
                   Get Started
                 </Link>

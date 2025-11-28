@@ -19,9 +19,7 @@ export default function HeroImage({
   children,
 }: HeroImageProps) {
   return (
-    <section
-      className={`relative w-full  ${height} overflow-hidden`}
-    >
+    <section className={`relative w-full ${height} overflow-hidden`}>
       {/* Background Image */}
       <Image
         src={src}
@@ -35,20 +33,27 @@ export default function HeroImage({
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Bottom-Left Content */}
-      <div className="absolute inset-0 flex items-end justify-start px-10 pb-10 text-left">
-        <div>
-          {children && <div className="text-white mb-40">{children}</div>}
+      <div className="absolute inset-0 flex items-end justify-start px-4 md:px-10 pb-6 md:pb-10">
+        <div className="max-w-[90%] md:max-w-[70%]">
+          {/* Optional Child Content */}
+          {children && (
+            <div className="text-white mb-6 md:mb-40 text-sm md:text-base">
+              {children}
+            </div>
+          )}
 
+          {/* Title */}
           {title && (
-            <h1 className="text-5xl md:text-8xl font-semibold ml-23 text-white drop-shadow-lg">
+            <h1 className="text-3xl ml-13 sm:text-5xl md:text-7xl lg:text-8xl font-semibold text-white drop-shadow-lg">
               {title}
             </h1>
           )}
 
+          {/* Subtitle */}
           {subtitle && (
-            <h1 className="text-5xl md:text-7xl font-serif mb-7 ml-23 text-white drop-shadow-lg">
+            <h2 className="text-xl sm:text-3xl ml-13 md:text-5xl lg:text-7xl font-serif text-white mt-2 drop-shadow-lg">
               {subtitle}
-            </h1>
+            </h2>
           )}
         </div>
       </div>

@@ -26,9 +26,9 @@ function ProjectImage({ src }: ProjectImageProps) {
         <Image
           src={src}
           alt="Project Thumbnail"
-          width={400}
-          height={200}
-          className="aspect-video w-[450px] cursor-zoom-in rounded-xl object-cover"
+          width={800}
+          height={400}
+          className="aspect-video w-full cursor-zoom-in rounded-xl object-cover"
         />
       </MorphingDialogTrigger>
 
@@ -37,9 +37,9 @@ function ProjectImage({ src }: ProjectImageProps) {
           <Image
             src={src}
             alt="Project Preview"
-            width={400}
-            height={200}
-            className="w-[450px]   rounded-xl object-cover"
+            width={800}
+            height={400}
+            className="w-full rounded-xl object-cover"
           />
         </MorphingDialogContent>
 
@@ -64,21 +64,29 @@ function ProjectImage({ src }: ProjectImageProps) {
 interface Project {
   id: number;
   name: string;
-  image: string; // changed from video → image
+  image: string;
   link: string;
   description: string;
 }
 
 export default function Projects() {
   return (
-    <div id="projects" className="ml-5">
-      <h3 className="mb-6  text-xl ml-25 font-medium">Recent Projects</h3>
-      <p className="mb-8 ml-80 mr-50   text-right font-medium">
-        After completing your year 12 education and earning the necessary
-        scores, you may apply for a bachelor's degree in architecture. To
-        qualify, students can complete one of three entrance exams
-      </p>
-      <div className="grid grid-cols-3 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    <section id="projects" className="px-4 sm:px-6 lg:px-12 py-10">
+      {/* Top Row Title + Paragraph */}
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-10">
+        <h3 className="text-xl md:text-2xl font-medium">
+          Recent Projects
+        </h3>
+
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl font-medium text-sm md:text-base lg:text-right">
+          After completing your year 12 education and earning the necessary
+          scores, you may apply for a bachelor&apos;s degree in architecture.
+          To qualify, students can complete one of three entrance exams.
+        </p>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project) => (
           <div key={project.id} className="space-y-2">
             <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 dark:bg-zinc-950/40 dark:ring-zinc-800/50">
@@ -86,14 +94,18 @@ export default function Projects() {
             </div>
 
             <div className="px-1">
-              <h1 className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50">
+              <h1 className="group relative inline-block font-medium text-zinc-900 dark:text-zinc-50">
                 {project.name}
                 <span className="absolute bottom-0.5 left-0 block h-px w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
               </h1>
+
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                {project.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
