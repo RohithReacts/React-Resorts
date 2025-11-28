@@ -40,7 +40,7 @@ const ARCHITECTS: Architect[] = [
 
 export default function ArchitectsList() {
   return (
-    <section className="w-full py-16 px-4 md:px-10 lg:px-20">
+    <section id="blog" className="w-full py-16 px-4 md:px-10 lg:px-20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* LEFT TITLE */}
         <div className="md:col-span-1 flex items-start">

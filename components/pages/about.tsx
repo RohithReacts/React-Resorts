@@ -46,9 +46,6 @@ export default function About() {
           <div className="h-px w-44 bg-gray-300 dark:bg-gray-700 mx-auto"></div>
         </div>
       </div>
-
-     
-     
     </section>
   );
 }

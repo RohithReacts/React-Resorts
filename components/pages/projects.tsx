@@ -73,7 +73,7 @@ export default function Projects() {
   return (
     <section id="projects" className="px-4 sm:px-6 lg:px-12 py-10">
       {/* Top Row Title + Paragraph */}
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-10">
+      <div className="flex flex-col lg:flex-row mt-10 lg:items-start lg:justify-between gap-4 mb-10">
         <h3 className="text-xl md:text-2xl font-medium">
           Recent Projects
         </h3>
