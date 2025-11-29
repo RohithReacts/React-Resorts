@@ -43,44 +43,51 @@ export function ProjectCategoriesSection({
           <div className="relative flex h-full flex-col justify-between px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16">
             {/* Left title */}
             <div className="max-w-xs sm:max-w-sm mt-20">
-              <p className="text-md font-medium uppercase tracking-[0.25em] text-white">
+              <p className="text-2xl font-semibold uppercase tracking-[0.25em] text-black dark:text-white">
                 Project
               </p>
-              <p className="mt-2 text-3xl text-white sm:text-4xl md:text-5xl font-semibold italic">
+              <p className="mt-2 text-3xl text-black dark:text-white sm:text-4xl md:text-5xl font-semibold italic">
                 Categories
               </p>
             </div>
 
             {/* Middle list + Right button */}
-            <div className="mt-8 flex flex-col gap-8 md:mt-0 md:flex-row md:items-end md:justify-between">
+            <div className="mt-8 flex flex-col gap-2 md:mt-0 md:flex-row md:items-end md:justify-between">
               {/* Categories list */}
-              <ul className="space-y-3 ml-25 text-sm text-white sm:text-base md:text-lg">
+              <ul className="space-y-2 ml-25 text-sm font-semibold text-black dark:text-white sm:text-base md:text-xl">
                 {[
                   "Interior design",
                   "Commercial architect",
                   "Landscape architect",
                   "Civic project",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
+                  <li key={item} className="flex items-center gap-4">
                     <span className="h-1.5 w-1.5 rounded-full bg-foreground" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* Contact button */}
-              <div className="flex justify-start md:justify-end">
-                <Button
-                  asChild
-                  variant="outline"
-                  className="group rounded-full border-white/70 bg-background/70 px-7 py-5 text-sm sm:text-base font-medium shadow-sm backdrop-blur
-                             hover:bg-background/90 hover:border-white dark:border-white/40"
+              <div className="relative w-full sm:h-32">
+                <div
+                  className="
+      flex justify-start md:justify-end
+      sm:absolute sm:bottom-6 sm:right-12
+      sm:mb-0 md:mb-0 
+    "
                 >
-                  <a href="#contact">
-                    <span className="mr-2">Contact us</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="group rounded-full border-white/70 bg-background/70 px-7 py-5 text-sm sm:text-base font-medium shadow-sm backdrop-blur
+                 hover:bg-background/90 hover:border-white dark:border-white/40"
+                  >
+                    <a href="#contact">
+                      <span className="mr-2">Contact us</span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

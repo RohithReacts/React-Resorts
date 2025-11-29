@@ -22,6 +22,7 @@ export default function Navbar() {
     { href: "#about", label: "About Us" },
     { href: "#architects", label: "Architects" },
     { href: "#projectcategories", label: "Project Categories" },
+    { href: "#recentcasestudies", label: "Recent Case Studies" },
   ];
 
   React.useEffect(() => {
@@ -50,7 +51,6 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-1000 backdrop-blur-2xl">
       <div className="max-w-6xl m-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-
         {/* LOGO */}
         <Link
           href="/"
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* DESKTOP NAV */}
         <div className="hidden md:flex flex-1 justify-center">
           <NavigationMenu viewport={false}>
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-x-4">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.href}>
                   <a
@@ -99,7 +99,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden px-4 pb-4 border-t border-gray-200 dark:border-gray-800"
+            className="md:hidden px-4 pb-4"
           >
             <ul className="flex flex-col items-center mt-6 space-y-4">
               {navItems.map((item) => (
