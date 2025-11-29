@@ -17,7 +17,7 @@ const ARCHITECTS: Architect[] = [
   {
     id: 1,
     name: "Max Abramovitz",
-        img: "/images/logo2.jpg",
+    img: "/images/logo2.jpg",
     description: "Hathor, relief on capitals at Philae island, southern Egypt.",
     profileLink: "#",
   },
@@ -32,7 +32,7 @@ const ARCHITECTS: Architect[] = [
   {
     id: 3,
     name: "Pietro Belluschi",
-        img: "/images/logo3.jpg",
+    img: "/images/logo3.jpg",
     description: "Cushion capital and early English Gothic foliated capital.",
     profileLink: "#",
   },
@@ -40,8 +40,8 @@ const ARCHITECTS: Architect[] = [
 
 export default function ArchitectsList() {
   return (
-    <section id="blog" className="w-full py-16 px-4 md:px-10 lg:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <section id="architects" className="w-full  py-16 px-4 md:px-10 lg:px-20">
+      <div className="grid grid-cols-1 mt-10 md:grid-cols-4 gap-8">
         {/* LEFT TITLE */}
         <div className="md:col-span-1 flex items-start">
           <p className="text-lg font-semibold flex items-center gap-2 dark:text-white">

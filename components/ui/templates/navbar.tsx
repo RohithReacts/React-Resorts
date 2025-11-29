@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
@@ -17,11 +16,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState("");
 
+  // ⬅️ Added Project Categories inside navItems
   const navItems = [
     { href: "#projects", label: "Projects" },
     { href: "#about", label: "About Us" },
-    { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contact" },
+    { href: "#architects", label: "Architects" },
+    { href: "#projectcategories", label: "Project Categories" },
   ];
 
   React.useEffect(() => {
@@ -48,12 +48,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className=" fixed top-0 left-0 w-full z-1000 backdrop-blur-2xl">
+    <nav className="fixed top-0 left-0 w-full z-1000 backdrop-blur-2xl">
       <div className="max-w-6xl m-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+
         {/* LOGO */}
         <Link
           href="/"
-          className="text-xl font-medium text-gray-400  dark:text-gray-100"
+          className="text-xl font-medium text-gray-400 dark:text-gray-100"
         >
           React Resorts
         </Link>
@@ -69,13 +70,11 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`
                       ${navigationMenuTriggerStyle()}
-                      rounded-t-2xl 
-                      px-4 py-2 
-                      transition
+                      rounded-t-2xl px-4 py-2 transition
                       ${
                         activeSection === item.href
-                          ? "bg-gray-200 dark:bg-accent font-semibold"
-                          : "bg-gray-200 dark:bg-accent font-semibold"
+                          ? "bg-blue-200 dark:bg-accent font-semibold"
+                          : "bg-gray-200 dark:bg-accent"
                       }
                     `}
                   >
@@ -85,16 +84,6 @@ export default function Navbar() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
-
-        {/* RIGHT BUTTON */}
-        <div className="hidden md:flex">
-          <Link
-            href="/get-started"
-            className="px-4 py-2 rounded-b-3xl text-white bg-accent dark"
-          >
-            Get Started
-          </Link>
         </div>
 
         {/* MOBILE TOGGLE */}
@@ -119,7 +108,7 @@ export default function Navbar() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      block px-4 py-2 rounded-lg
+                      block px-4 py-2 rounded-lg w-48 text-center
                       ${
                         activeSection === item.href
                           ? "bg-blue-100 dark:bg-accent font-semibold"
@@ -131,16 +120,6 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-
-              <li>
-                <Link
-                  href="/get-started"
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 rounded-lg bg-gray-300 dark:bg-accent text-black dark:text-white"
-                >
-                  Get Started
-                </Link>
-              </li>
             </ul>
           </motion.div>
         )}

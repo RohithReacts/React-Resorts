@@ -42,14 +42,12 @@ export default function HeroImage({
             </div>
           )}
 
-          {/* Title */}
           {title && (
             <h1 className="text-3xl ml-13 sm:text-5xl md:text-7xl lg:text-8xl font-semibold text-white drop-shadow-lg">
               {title}
             </h1>
           )}
 
-          {/* Subtitle */}
           {subtitle && (
             <h2 className="text-xl sm:text-3xl ml-13 md:text-5xl lg:text-7xl font-serif text-white mt-2 drop-shadow-lg">
               {subtitle}

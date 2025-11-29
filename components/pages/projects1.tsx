@@ -12,22 +12,22 @@ export function ProjectCategoriesSection({
   imageSrc = "/images/projects.webp", // change to your image path
 }: ProjectCategoriesProps) {
   return (
-    <section className="relative w-full  text-foreground">
-      {/* Top wave */}
+    <section
+      id="projectcategories"
+      className="relative w-full  text-foreground"
+    >
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-6 md:h-8 bg-background
+        className="pointer-events-none absolute  inset-x-0 top-0 h-6 md:h-8 bg-background
         mask-[radial-gradient(120%_120%_at_50%_120%,transparent_40%,black_60%)]"
       />
 
-      {/* Bottom wave */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-6 md:h-8 bg-background
+        className="pointer-events-none absolute  inset-x-0 bottom-0 h-6 md:h-8 bg-background
         mask-[radial-gradient(120%_120%_at_50%_-20%,transparent_40%,black_60%)]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-0 md:px-4 lg:px-6">
+      <div className="relative mx-auto max-w-7xl px-0 md:px-4 lg:px-6">
         <div className="relative h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden rounded-none md:rounded-3xl">
-          {/* Background image */}
           <Image
             src={imageSrc}
             alt="Modern house project"
@@ -42,7 +42,7 @@ export function ProjectCategoriesSection({
           {/* Content */}
           <div className="relative flex h-full flex-col justify-between px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16">
             {/* Left title */}
-            <div className="max-w-xs sm:max-w-sm">
+            <div className="max-w-xs sm:max-w-sm mt-20">
               <p className="text-md font-medium uppercase tracking-[0.25em] text-white">
                 Project
               </p>

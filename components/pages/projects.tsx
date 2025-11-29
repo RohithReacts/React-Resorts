@@ -74,14 +74,12 @@ export default function Projects() {
     <section id="projects" className="px-4 sm:px-6 lg:px-12 py-10">
       {/* Top Row Title + Paragraph */}
       <div className="flex flex-col lg:flex-row mt-10 lg:items-start lg:justify-between gap-4 mb-10">
-        <h3 className="text-xl md:text-2xl font-medium">
-          Recent Projects
-        </h3>
+        <h3 className="text-xl md:text-2xl font-medium">Recent Projects</h3>
 
         <p className="text-gray-600 dark:text-gray-400 max-w-xl font-medium text-sm md:text-base lg:text-right">
           After completing your year 12 education and earning the necessary
-          scores, you may apply for a bachelor&apos;s degree in architecture.
-          To qualify, students can complete one of three entrance exams.
+          scores, you may apply for a bachelor&apos;s degree in architecture. To
+          qualify, students can complete one of three entrance exams.
         </p>
       </div>
 
