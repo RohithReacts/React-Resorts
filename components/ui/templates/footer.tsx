@@ -54,9 +54,9 @@ function ThemeSwitch() {
         duration: 0.2,
       }}
       enableHover={false}
-      onValueChange={(id: string|null) =>{
-        if (id) setTheme(id)
-      } }
+      onValueChange={(id: string | null) => {
+        if (id) setTheme(id);
+      }}
     >
       {THEMES_OPTIONS.map((item) => (
         <button
@@ -80,8 +80,7 @@ export function Footer() {
         <Link href="/" target="_blank" rel="noreferrer">
           <TextLoop className="text-xs text-zinc-500">
             <span>Building Beyound</span>
-            <span>Built with Next.js and Motion-Primitives.</span>
-            <span>© 2025 Rohithreacts.</span>
+            <span> Rohithreacts. © 2025</span>
           </TextLoop>
         </Link>
 
