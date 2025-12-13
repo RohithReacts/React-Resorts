@@ -108,7 +108,7 @@ export default function Navbar() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      block px-4 py-2 rounded-lg w-48 text-center
+                      flex justify-center items-center px-4 py-2 rounded-br-lg w-48 text-center
                       ${
                         activeSection === item.href
                           ? "bg-blue-100 dark:bg-accent font-semibold"
